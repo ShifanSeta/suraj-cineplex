@@ -10,6 +10,9 @@ import './nowshowing.css'
 
 const NowShowing = () => {
 
+
+
+
     const showData = [
         {
             label : "ARGYLLE",
@@ -50,25 +53,25 @@ const NowShowing = () => {
         },
     ]
   return (
-    <main className='container'>
-        <h4 className='text-dark'>Now Showing</h4>
+    <main className='container py-5'>
+        <h4 className='text-dark px-5'>Now Showing</h4>
         <section className='row d-flex justify-content-start align-items-center'> 
             { showData && showData.length >= 0 ? showData.map((item, index) => {
                 return(
-                    <article className='my-3 col-lg-3 col-md-4 col-sm-1 col-xs-1' >
-                        <section>
+                    <article className='my-3 col-lg-3 col-md-4 col-sm-6 col-xs-12 d-flex flex-col justify-content-center align-items-center' >
+                        <section className=' '>
                             <img className='image_size' src={item.link} alt="poster" style={{width: "206px"}} />
-                            <p className='poster_text mt-1'>{item.label}</p>
+                            <p className='poster_text mt-1 text-start justify-content-start'>{item.label}</p>
                             <p className='category'>U/A &bull; {item.category}</p>
                             <p className='category mb-1'>{item.lang}</p>
-                        </section>
-                        <button className='btn btn_col my-1'>Book Tickets</button>
+                            <button className='btn btn_col my-1'>Book Tickets</button>
                         <button className='btn active mx-2'>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-info-circle" viewBox="0 0 16 16">
                             <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
                             <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
                             </svg>
                         </button>
+                        </section>
                     </article> 
                 )
             })

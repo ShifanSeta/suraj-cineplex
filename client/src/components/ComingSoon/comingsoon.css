@@ -26,3 +26,11 @@
 .text-start{
     text-align: start !important;
 }
+.main_container{
+    background-color: rgb(248, 246, 246);
+    
+}
+
+.span_text{
+    color: black !important;
+}

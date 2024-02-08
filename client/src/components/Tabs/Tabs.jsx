@@ -3,6 +3,10 @@ import './tabs.css'
 import ins from '../../utils/images/insignia.avif'
 import dx from '../../utils/images/4dx.webp'
 import NowShowing from '../NowShowing/NowShowing'
+import ComingSoon from '../ComingSoon/ComingSoon';
+import Experiences from '../Experiences/Experiences'
+import Trailers from '../Trailers/Trailers'
+
 
 const Tabs = () => {
   return (
@@ -32,6 +36,10 @@ const Tabs = () => {
       </section>  
       <section>
         <NowShowing />
+        <ComingSoon />
+        <Experiences />
+        <br />
+        <Trailers />
       </section>
     </main>
   )
