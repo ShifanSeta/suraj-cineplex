@@ -1,0 +1,23 @@
+.logo{
+    width: 60px;
+    height: auto;
+}
+
+.nav-link{
+    font-family: Poppins, sans-serif;
+    font-size: 14px !important;
+    cursor: pointer;
+    color: #ffcb03 ;
+}
+
+
+.bg_active{
+    background-color: #ffcb03;
+    border-radius: 100px;
+    color: black !important;
+}
+
+.login{
+    background-color: rgb(255, 240, 214);
+    border-radius: 8px;
+}

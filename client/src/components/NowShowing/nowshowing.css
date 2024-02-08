@@ -1,0 +1,20 @@
+.poster_text{
+    color: #000;
+    font-family: Poppins;
+    font-size: 13px;
+    font-weight: 700;
+    font-weight: bold;
+    margin-bottom: auto;
+
+}
+
+.category{
+    color: #808190;
+    font-size: 12px;
+    margin-bottom: auto;
+
+}
+
+.btn_col{
+    background-color: #ffcb03;
+}
