@@ -14,3 +14,10 @@
 .stores_logo{
     height: 35px;
 }
+
+
+@media screen and (max-width : 600px) {
+    .main_footer{
+        display: none;
+    }
+}

@@ -1,8 +1,8 @@
 import './slider.css';
 import React from 'react'
-import argy from '../../utils/images/poster1.jpeg'
-import fail from '../../utils/images/poster2.jpg'
-import fighter from '../../utils/images/poster3.jpeg'
+import argy from '../../utils/images/slider1.avif'
+import fail from '../../utils/images/slider2.avif'
+import fighter from '../../utils/images/slider3.avif'
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 

@@ -1,0 +1,20 @@
+.valid_text{
+ color: #212529bf;
+ font-size: 11px;
+}
+.offer_btn{
+    background-color: rgb(255 203 0) !important;
+    color: black;
+}
+
+.offer_label{
+    font-size: 12px;
+}
+
+.secondary_container{
+    background-color: #fef1d6;
+}
+
+.row_p{
+    padding: 0 !important;
+}

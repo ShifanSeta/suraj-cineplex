@@ -1,0 +1,17 @@
+.nav{
+    border-bottom: #c1c1c1;
+    border-bottom-style: groove;
+}
+
+.nav-underline .nav-link:hover {
+    border-bottom-color: #ffcb03;
+    color: black;
+}
+
+.header_icons{
+    width: 30px;
+}
+
+.flex-col{
+    flex-direction: column;
+}

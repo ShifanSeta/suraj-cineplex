@@ -6,6 +6,7 @@ import NowShowing from '../NowShowing/NowShowing'
 import ComingSoon from '../ComingSoon/ComingSoon';
 import Experiences from '../Experiences/Experiences'
 import Trailers from '../Trailers/Trailers'
+import Offers from '../Offers/Offers'
 
 
 const Tabs = () => {
@@ -40,6 +41,7 @@ const Tabs = () => {
         <Experiences />
         <br />
         <Trailers />
+        <Offers />
       </section>
     </main>
   )

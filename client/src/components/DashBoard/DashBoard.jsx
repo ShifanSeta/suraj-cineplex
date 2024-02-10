@@ -7,10 +7,8 @@ import Footer from '../Footer/Footer';
 const DashBoard = () => {
   return (
     <div>
-        <Navbar />
         <Slider />
         <Tabs />
-        <Footer />
     </div>
   )
 }

@@ -17,7 +17,7 @@ import applestore from '../../utils/images/appstore.svg'
 
 const Footer = () => {
   return (
-    <main className='bg_color'>
+    <main className='bg_color main_footer'>
         <section className='footer_text py-3 container d-flex justify-content-evenly align-items-center'>
             <article className='d-flex justify-content-center align-items-center'>
                 <p className='px-2'>Certified by:</p>
