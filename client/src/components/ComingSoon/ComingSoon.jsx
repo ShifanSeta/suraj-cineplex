@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import argy from '../../utils/movie/argy.avif'
 import fail from '../../utils/movie/fail.avif'
 import fighter from '../../utils/movie/fighter.avif'
@@ -10,7 +10,8 @@ import './comingsoon.css'
 
 
 
-const ComingSoon = () => {
+const ComingSoon = ({ref}) => {
+    
 
     const showData = [
         {
@@ -52,7 +53,7 @@ const ComingSoon = () => {
         },
     ]
   return (
-    <main className='main_container d-flex flex-col py-5'>
+    <main ref={ref} className='main_container d-flex flex-col py-5'>
         <div className='container'>
         <section className='d-flex justify-content-between align-items-center py-3'>
         <h4 className='text-black'>Coming soon</h4>

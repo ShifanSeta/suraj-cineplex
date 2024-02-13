@@ -20,12 +20,11 @@ import './Navbar.css';
 
 const Navbar = () => {
 
-    const [select, setSelect] = useState(false);
 
   return (
     <>
-        <nav className="navbar navbar-expand-lg ">
-            <div className="container-fluid">
+        <nav className="navbar navbar-expand-lg bg-white" >
+            <div className="container-fluid" style={{position: 'relative'}}>
                 <ReactLogo className="logo" />
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span className="navbar-toggler-icon" />
@@ -34,7 +33,7 @@ const Navbar = () => {
                 <ul className="navbar-nav mx-3 me-auto mb-2 mb-lg-0">
                     <li className="nav-item d-flex align-items-center px-3 bg_active text-dark">
                     <Home className='' />
-                    <Link className="nav-link " aria-current="page" href="#">Home</Link>
+                    <Link className="nav-link " to='/' aria-current="page" href="#">Home</Link>
                     </li>
 
                     <li className="nav-item d-flex align-items-center px-3 ">

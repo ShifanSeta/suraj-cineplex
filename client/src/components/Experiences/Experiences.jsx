@@ -2,6 +2,9 @@ import React from 'react'
 import insignia from '../../utils/images/insp.avif'
 import dxp from '../../utils/images/4dxp.avif'
 import './experiences.css'
+
+
+
 const Experiences = () => {
   return (
     <main className='container'>

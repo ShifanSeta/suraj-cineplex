@@ -6,12 +6,84 @@
 .nav-underline .nav-link:hover {
     border-bottom-color: #ffcb03;
     color: black;
+    
+}
+.nav-underline .nav-link:active {
+    border-bottom-color: #ffcb03;
+    color: black;
+    
 }
 
 .header_icons{
-    width: 30px;
+    width: 1.4rem;
 }
 
 .flex-col{
     flex-direction: column;
+}
+
+h5{
+    font-size: 0.75rem !important;
+}
+
+.food_img{
+    width: 30%;
+}
+
+.input_size{
+    width: 20% !important;
+
+}
+
+.flex-col{
+    flex-direction: column !important;
+}
+
+.bottom_btn{
+    position: sticky;
+    bottom: 0;
+    width: -webkit-fill-available;
+}
+
+.aside_container{
+    position: relative;
+    width: -webkit-fill-available;
+    right: 0;
+}
+
+@media screen and (min-width: 599px) {
+    .mobile_container{
+        display: none !important;
+    }
+}
+
+
+
+@media screen and (max-width: 600px) {
+    .desktop_container{
+        display: none !important;
+    }
+}
+.card_width{
+    width: 185px
+}
+@media screen and (max-width: 420px) {
+    .card_width{
+        width: 150px !important;
+    }
+}
+@media screen and (max-width: 370px) {
+    .card_width{
+        width: 130px !important;
+    }
+}
+
+.img_w{
+    width: 6rem;
+}
+
+.bottom_section{
+    bottom: 0;
+    position: sticky;
+    background-color: white;
 }
