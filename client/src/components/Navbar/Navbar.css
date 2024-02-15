@@ -21,3 +21,24 @@
     background-color: rgb(255, 240, 214);
     border-radius: 8px;
 }
+
+@media screen and (max-width: 600px) {
+    .main_nav_desktop{
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .main_nav_mobile{
+        display: none !important;
+    }
+}
+
+
+.main_nav_mobile{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+
+}

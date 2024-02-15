@@ -20,7 +20,7 @@
     width: -webkit-fill-available;
 }
 
-@media screen and (max-width : 600px) {
+@media screen and (max-width : 750px) {
     .main_footer{
         display: none;
     }

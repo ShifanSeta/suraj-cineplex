@@ -1,0 +1,29 @@
+@media screen and (min-width: 600px){
+    .main_bottom_bar{
+        display: none !important;
+    }
+}
+
+.main_bottom_bar{
+    bottom: 0;
+    position: sticky;
+    z-index: 1;
+    background-color: white;
+}
+
+.nav_link{
+    text-decoration: none;
+    color: black;
+    font-size: 0.8rem;
+    fill: black;
+}
+
+.nav_link :active{
+    border-bottom: 2px black;
+}
+
+.svg_img{
+    width: 25px;
+}
+
+

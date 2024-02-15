@@ -7,6 +7,7 @@ import OffersList from './components/Offers/OffersList'
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import Food from './components/Food/Food'
+import BottomBar from './components/BottomBar/BottomBar'
 
 const App = () => {
   
@@ -20,6 +21,7 @@ const App = () => {
                 <Route path='/food' element={<Food />} />
 
             </Routes>
+            <BottomBar />
             <Footer />
         </Router>   
     </>

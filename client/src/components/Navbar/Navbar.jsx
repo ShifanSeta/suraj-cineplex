@@ -9,6 +9,10 @@ import {ReactComponent as Login } from '../../utils/images/login.svg';
 import {ReactComponent as Gift } from '../../utils/images/gift.svg';
 import {ReactComponent as Merch } from '../../utils/images/merch.svg';
 import {ReactComponent as Advertise } from '../../utils/images/advertise.svg';
+import  Profile  from '../../utils/images/profile.svg';
+import {ReactComponent as Search } from '../../utils/images/search1.svg';
+
+
 
 
 import { useState } from 'react';
@@ -23,7 +27,7 @@ const Navbar = () => {
 
   return (
     <>
-        <nav className="navbar navbar-expand-lg bg-white" >
+        <nav className="navbar main_nav_desktop navbar-expand-lg bg-white" >
             <div className="container-fluid" style={{position: 'relative'}}>
                 <ReactLogo className="logo" />
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -78,6 +82,18 @@ const Navbar = () => {
 
                 </div>
             </div>
+        </nav>
+        <nav className='main_nav_mobile shadow d-flex justify-content-between align-items-center px-3 py-2'>
+            <section className='d-flex flex-col justify-content-center align-items-center text-start'>
+                <span className='text-bold' style={{fontSize: "0.8rem", }}>Hey!</span>
+                <span style={{fontSize: "0.7rem"}}>Junagadh</span>
+            </section>
+            <section className='d-flex justify-content-center align-items-start'>
+                <span>
+                <Search className="mx-2" />
+                <img src={Profile} style={{width: "24px"}} alt="profile" />
+                </span>
+            </section>
         </nav>
 
     </>

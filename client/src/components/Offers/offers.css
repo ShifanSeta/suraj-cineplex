@@ -18,3 +18,8 @@
 .row_p{
     padding: 0 !important;
 }
+@media screen and (max-width: 600px) {
+    .main_container{
+        display: none !important;
+    }
+}

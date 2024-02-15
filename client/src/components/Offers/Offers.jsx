@@ -70,10 +70,10 @@ const Offers = () => {
                 {
                     smapleData && smapleData.length >= 0 ? smapleData.slice(0, 4).map((item, index) => {
                         return(
-                            <article className='col-3 rounded'>
-                                <img src={item.photo} alt="offers" className='w-100' />
+                            <article className='col-lg-3 my-2 col-md-6 col-sm-6 col-xs-12 rounded'>
+                                <img src={item.photo} alt="offers" className='' style={{    width: "-webkit-fill-available"}} />
                                 <div className='bg-white p-3'>
-                                    <p className='text-black offer_label'>
+                                    <p className='text-black offer_label text-truncate'>
                                         {item.label}
                                     </p>
                                     <div className='d-flex justify-content-between pt-3 align-items-center'>
