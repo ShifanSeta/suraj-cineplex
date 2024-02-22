@@ -24,7 +24,7 @@ const Tabs = () => {
   return (
     <>
       <main>
-        <section className="container my-3">
+        <section className="container my-3 desktop_view">
           <ul className="nav nav-underline">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#">

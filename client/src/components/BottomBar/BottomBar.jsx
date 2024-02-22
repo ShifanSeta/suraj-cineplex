@@ -15,17 +15,17 @@ const BottomBar = () => {
                 <img src={Home} className='svg_img' alt="home" /> 
                 <span>Home</span>
             </Link>
-            <Link to='/' className='d-flex px-2 nav_link flex-col justify-content-center align-items-center'>
+            <Link to='/movies' className='d-flex px-2 nav_link flex-col justify-content-center align-items-center'>
                 <img src={Cinema} className='svg_img' alt="home" /> 
-                <span>Cinemas</span>
+                <span>Movies</span>
             </Link>
-            <Link to='/' className='d-flex px-2 nav_link flex-col justify-content-center align-items-center'>
+            <Link to='/food' className='d-flex px-2 nav_link flex-col justify-content-center align-items-center'>
                 <img src={Offers} className='svg_img' alt="home" /> 
-                <span>Offers</span>
+                <span>Food</span>
             </Link>
-            <Link to='/' className='d-flex px-2 nav_link flex-col justify-content-center align-items-center'>
+            <Link to='/' className='d-flex  px-2 nav_link flex-col justify-content-center align-items-center'>
                 <img src={Soon} className='svg_img' alt="home" /> 
-                <span>Coming Soon</span>
+                <span className='text-truncate' style={{width: "50px"}}>Advertisement</span>
             </Link>
             <Link to='/' className='d-flex px-2 nav_link flex-col justify-content-center align-items-center'>
                 <img src={More} className='svg_img' alt="home" /> 

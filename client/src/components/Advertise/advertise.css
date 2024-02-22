@@ -1,0 +1,86 @@
+/* #app {
+    height: 100%;
+  }
+  html,
+  body {
+    position: relative;
+    height: 100%;
+  }
+  
+  body {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+   */
+  .swiper {
+  
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+  
+.mySwiper .swiper-slide {
+    opacity: 4 !important;
+}
+
+.mySwiper{
+    height: 25vh !important;
+}
+
+.bg_color_slider{
+    background-color: #e2dede;
+}
+
+:root {
+    --swiper-theme-color: #ffcb03;
+}
+
+.bg_header_advertise{
+    background-color: #fef1d6;
+}
+
+.input-group-text{
+    background-color: white;
+}
+
+.input-group {
+    width: 50% !important;
+}
+
+.btn_color_custom{
+    background-color: #ffcb03;
+}
+
+
+@media screen and (max-width: 900px) {
+    .desktop_advertise{
+      display: none !important;
+    }
+    .input-group {
+      width: 100% !important;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .mobile_advertise{
+    display: none !important;
+  }
+}

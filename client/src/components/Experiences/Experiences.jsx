@@ -7,7 +7,7 @@ import './experiences.css'
 
 const Experiences = () => {
   return (
-    <main className='container'>
+    <main className='container desktop_view'>
         <section className='d-flex justify-content-between align-items-center py-3'>
         <h4 className='text-black'>Experiences</h4>
 

@@ -1,0 +1,30 @@
+.gif{
+    width: 12rem;
+}
+.logo{
+    width: 6rem;
+}
+
+.btn-yl{
+    background-color: rgb(255, 203, 5);
+}
+
+@media screen and (max-width: 575px) {
+    .content-desktop{
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 574px) {
+    .content-mobile{
+        display: none !important;
+    }
+}
+
+.text-s{
+    font-size: 2rem;
+}
+
+.btn_proceed{
+    bottom: 0
+}

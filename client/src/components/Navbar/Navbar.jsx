@@ -11,7 +11,7 @@ import {ReactComponent as Merch } from '../../utils/images/merch.svg';
 import {ReactComponent as Advertise } from '../../utils/images/advertise.svg';
 import  Profile  from '../../utils/images/profile.svg';
 import {ReactComponent as Search } from '../../utils/images/search1.svg';
-
+import Auth, {AuthMobile} from '../auth/Auth';
 
 
 
@@ -75,11 +75,9 @@ const Navbar = () => {
                     <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
                     <button className="btn btn-outline-success" type="submit">Search</button>
                 </form>
-                <div className="nav-item d-flex align-items-center px-3 login py-2 mx-2">
-                    <Login className='' />
-                    <Link className="nav-link px-2" aria-current="page" href="#">Login</Link>
-                    </div>
-
+                <div  className="nav-item d-flex align-items-center px-3 login py-2 mx-2" >
+                    <Auth login={"Login"} className="px-2" />
+                </div>
                 </div>
             </div>
         </nav>
@@ -91,7 +89,20 @@ const Navbar = () => {
             <section className='d-flex justify-content-center align-items-start'>
                 <span>
                 <Search className="mx-2" />
+            
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
                 <img src={Profile} style={{width: "24px"}} alt="profile" />
+                </button>
+
+                <div className="offcanvas offcanvas-end w-100" tabIndex={-1} id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                    <div className="offcanvas-header d-flex justify-content-end align-items-end">
+                            <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close" />
+                    </div>
+                    <div className="offcanvas-body">
+                        <AuthMobile />
+                    </div>
+                </div>
+
                 </span>
             </section>
         </nav>

@@ -59,7 +59,7 @@ const ComingSoon = ({ref}) => {
         },
     ]
   return (
-    <main ref={ref} className='main_container d-flex flex-col py-5'>
+    <main ref={ref} className='main_container_coming d-flex flex-col py-5'>
         <div className='container'>
         <section className='d-flex justify-content-between align-items-center py-3'>
         <h4 className='text-black'>Coming soon</h4>

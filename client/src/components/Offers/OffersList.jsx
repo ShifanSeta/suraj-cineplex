@@ -35,7 +35,7 @@ const OffersList = () => {
         },
     ]
   return (
-    <main className='main_container py-5'>
+    <main className='container py-5'>
         <section className='container'>
             <section className='d-flex justify-content-between align-items-center py-3'>
             <h4 className='text-black'>Offers for you</h4>
@@ -47,7 +47,7 @@ const OffersList = () => {
                             <article className='col-lg-3 col-md-3 col-sm-12 col-xs-12 rounded py-3'>
                                 <img src={item.photo} alt="offers" className='w-100' />
                                 <div className='bg-white p-3'>
-                                    <p className='text-black offer_label'>
+                                    <p className='text-black offer_label text-truncate'>
                                         {item.label}
                                     </p>
                                     <div className='d-flex justify-content-between pt-3 align-items-center'>

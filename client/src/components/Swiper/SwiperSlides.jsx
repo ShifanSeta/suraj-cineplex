@@ -25,7 +25,7 @@ export default function SwiperSlides() {
 
   return (
     <>
-      <div className="container bg-white">
+      <div className="container bg-white main_swiper">
         <div className="bg-light ">
           <Swiper
             style={{

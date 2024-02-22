@@ -43,6 +43,7 @@ h5{
     position: sticky;
     bottom: 0;
     width: -webkit-fill-available;
+    /* z-index: 2; */
 }
 
 .aside_container{
@@ -83,7 +84,8 @@ h5{
 }
 
 .bottom_section{
-    bottom: 0;
+    bottom: 60px;
     position: sticky;
     background-color: white;
+    z-index: 2;
 }

@@ -1,0 +1,56 @@
+.contact_header{
+    background-color: #ffcb03;
+}
+
+.icon_size{
+    width: 20px;
+}
+
+
+
+
+h4 {
+    display: flex;
+    flex-direction: row;
+  }
+h4:before, h4:after{
+    content: "";
+    flex: 1 1;
+    border-bottom: 1px solid;
+    margin: auto;
+  }
+h4:before {
+    margin-right: 10px
+  }
+h4:after {
+    margin-left: 10px
+  }
+
+iframe {
+    width: 40vw;
+    height: 100%;
+    border: none;
+}
+
+
+
+
+@media screen and (max-width: 997px) {
+    .contact_desktop_main{
+        display: none !important;
+    }
+    iframe {
+        width: 100vw;
+        height: 300px;
+        border: none;
+    }
+
+}
+
+@media screen and (min-width: 997px) {
+    .contact_mobile_main{
+        display: none !important;
+    }
+   
+
+}

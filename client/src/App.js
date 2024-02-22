@@ -8,6 +8,10 @@ import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
 import Food from './components/Food/Food'
 import BottomBar from './components/BottomBar/BottomBar'
+import Auth from './components/auth/Auth'
+import Movies from './components/Movies/Movies'
+import Advertise from './components/Advertise/Advertise'
+import Contact from './components/Contact/Contact'
 
 const App = () => {
   
@@ -19,6 +23,11 @@ const App = () => {
                 <Route path='/' element={<DashBoard />} />
                 <Route path='/offers' element={<OffersList />} />
                 <Route path='/food' element={<Food />} />
+                <Route path='/auth' element={<Auth />} />
+                <Route path='/movies' element={<Movies />} />
+                <Route path='/advertise' element={<Advertise />} />
+                <Route path='/contact-us' element={<Contact />} />
+
 
             </Routes>
             <BottomBar />

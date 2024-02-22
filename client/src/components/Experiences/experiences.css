@@ -1,3 +1,9 @@
 .span_text{
     color: black !important;
 }
+
+@media screen and (max-width: 600px) {
+    .desktop_view{
+        display: none !important;
+    }
+}

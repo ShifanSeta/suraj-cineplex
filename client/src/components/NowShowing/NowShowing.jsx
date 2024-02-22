@@ -60,7 +60,7 @@ const NowShowing = () => {
   return (
     <main className='container py-5 '>
         <h4 className='text-dark mx-3'>Now Showing</h4>
-        <section className='row d-flex justify-content-center align-items-center'> 
+        <section className='row d-flex justify-content-evenly align-items-center'> 
             { showData && showData.length >= 0 ? showData.map((item, index) => {
                 return( 
                     <article className='my-3  col-lg-3 col-md-4 col-sm-6 col-xs-12 d-flex flex-col justify-content-center align-items-center section_size' >
@@ -69,7 +69,7 @@ const NowShowing = () => {
                             <p className='poster_text mt-1 text-start justify-content-start'>{item.label}</p>
                             <p className='category'>U/A &bull; {item.category}</p>
                             <p className='category mb-1'>{item.lang}</p>
-                            <button className='btn active my-1 btn_sm'>View details</button>
+                            <button className='btn active my-1 btn_sm'>Book Tickets</button>
                         <button className='btn active mx-2'>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="notification_add_black_24dp 1" clip-path="url(#clip0_3892_20554)">

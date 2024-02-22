@@ -26,3 +26,20 @@
     object-fit: cover;
   }
   
+
+  .carousel{
+    height: 340px;
+  }
+
+
+  @media screen and (max-width: 600px) {
+    .carousel{
+      height: 12rem;
+    }
+  }
+
+  /* @media screen and (max-width: 900px) {
+    .carousel{
+      height: 15rem;
+    }
+  } */
