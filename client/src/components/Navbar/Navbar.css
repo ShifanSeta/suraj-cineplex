@@ -7,14 +7,14 @@
     font-family: Poppins, sans-serif;
     font-size: 14px !important;
     cursor: pointer;
-    color: #ffcb03 ;
+    color: white ;
 }
 
 
 .bg_active{
-    background-color: #ffcb03;
+    background-color: #dc3545;
     border-radius: 100px;
-    color: black !important;
+    color: white !important;
 }
 
 .login{
@@ -35,10 +35,27 @@
 }
 
 
+@media screen and (min-width: 950px) {
+    .btn-navigate{
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .links{
+        display: none !important;
+    }
+}
+
+
 .main_nav_mobile{
     position: sticky;
     top: 0;
     background-color: white;
     z-index: 1;
 
+}
+
+.canvas-width{
+    width: 35% !important;
 }

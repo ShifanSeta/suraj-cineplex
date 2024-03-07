@@ -35,7 +35,7 @@ const OffersList = () => {
         },
     ]
   return (
-    <main className='container py-5'>
+    <main className='bg-light py-5'>
         <section className='container'>
             <section className='d-flex justify-content-between align-items-center py-3'>
             <h4 className='text-black'>Offers for you</h4>
@@ -52,7 +52,7 @@ const OffersList = () => {
                                     </p>
                                     <div className='d-flex justify-content-between pt-3 align-items-center'>
                                     <p className='valid_text'>valid till: {item.validity}</p>
-                                    <button className='btn btn-sm offer_btn'>view</button>
+                                    <button className='btn btn-sm btn-danger'>view</button>
                                     </div>
                                 </div>
                             </article>

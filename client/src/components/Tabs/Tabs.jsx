@@ -10,12 +10,15 @@ import Offers from "../Offers/Offers";
 import SwiperSlides from "../Swiper/SwiperSlides";
 import { useRef } from "react";
 import { Link } from "react-router-dom";
+import { AdvertiseSlider } from "../Advertise/Advertise";
+import Food from '../../utils/food/popcorn.avif'
+import FoodCard from "../shared/Header/FoodCard";
 
 const Tabs = () => {
   const comingRef = useRef(null);
-  const experienceRef = useRef(null);
   const trailerRef = useRef(null);
-  const OfferRef = useRef(null);
+  const AdvertiseRef = useRef(null);
+  const FoodRef = useRef(null)
 
   const handleScroll = (Ref) => {
     Ref.current?.scrollIntoView({ behavior: "smooth" });
@@ -24,7 +27,7 @@ const Tabs = () => {
   return (
     <>
       <main>
-        <section className="container my-3 desktop_view">
+        <section className="container  desktop_view py-2">
           <ul className="nav nav-underline">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="#">
@@ -34,23 +37,18 @@ const Tabs = () => {
             <li className="nav-item" onClick={() => handleScroll(comingRef)}>
               <a className="nav-link">Coming Soon</a>
             </li>
-            <li className="nav-item">
-              <Link to="/food" className="nav-link" href="#">
+            <li className="nav-item" onClick={() => handleScroll(FoodRef)}>
+              <Link className="nav-link" href="#">
                 Order Food
               </Link>
             </li>
-            <li className="nav-item" onClick={() => handleScroll(trailerRef)}>
+            <li className="nav-item" onClick={() => handleScroll(AdvertiseRef)}>
               <a className="nav-link" href="#">
-                Trailers
-              </a>
-            </li>
-            <li className="nav-item" onClick={() => handleScroll(OfferRef)}>
-              <a className="nav-link" href="#">
-                Offers
+                Advertise
               </a>
             </li>
           </ul>
-          <article className="my-4">
+          {/* <article className="my-4">
             <img src={dx} alt="dx" className="mx-2" style={{ width: "70px" }} />
             <img
               src={ins}
@@ -58,28 +56,25 @@ const Tabs = () => {
               className="mx-2"
               style={{ width: "79px" }}
             />
-          </article>
+          </article> */}
         </section>
         <section>
           <NowShowing />
           <div ref={comingRef}>
             <ComingSoon />
           </div>
-          <div ref={experienceRef}>
-            <Experiences />
+          <div className="" ref={FoodRef}>
+            <FoodCard />
           </div>
           <br />
           <div ref={trailerRef}>
             <Trailers />
           </div>
-          <SwiperSlides />
-
-          <div ref={OfferRef}>
+          <div ref={AdvertiseRef}>
             <Offers />
           </div>
         </section>
       </main>
-      
     </>
   );
 };

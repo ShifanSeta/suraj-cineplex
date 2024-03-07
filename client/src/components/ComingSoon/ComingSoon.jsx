@@ -7,11 +7,30 @@ import hanuman from '../../utils/movie/hanuman.avif'
 import kamthan from '../../utils/movie/kamthan.avif'
 import tbm from '../../utils/movie/tbuj.jpeg'
 import './comingsoon.css'
+import { motion } from "framer-motion";
 
 
 
 const ComingSoon = ({ref}) => {
-    
+    const MotionContainer = {
+        hidden: { opacity: 1, scale: 0 },
+        visible: {
+          opacity: 1,
+          scale: 1,
+          transition: {
+            delayChildren: 0.3,
+            staggerChildren: 0.2
+          }
+        }
+      };
+      
+      const MotionItem = {
+        hidden: {  y: 30, opacity: 0 },
+        visible: {
+          y: 0,
+          opacity: 1
+        }
+      };
 
     const showData = [
         {
@@ -59,42 +78,20 @@ const ComingSoon = ({ref}) => {
         },
     ]
   return (
-    <main ref={ref} className='main_container_coming d-flex flex-col py-5'>
-        <div className='container'>
-        <section className='d-flex justify-content-between align-items-center py-3'>
-        <h4 className='text-black'>Coming soon</h4>
-
-        <nav aria-label="Page navigation example text-black">
-            <ul className="pagination">
-                <li className="page-item">
-                <a className="page-link" href="#" aria-label="Previous">
-                    <span className='span_text' aria-hidden="true">«</span>
-                </a>
-                </li>
-                <li className="page-item">
-                <a className="page-link" href="#" aria-label="Next">
-                    <span className='span_text' aria-hidden="true">»</span>
-                </a>
-                </li>
-                <li className="page-item">
-                <a className="page-link" href="#" aria-label="Next">
-                    <span className='span_text' aria-hidden="true">See all</span>
-                </a>
-                </li>
-            </ul>
-        </nav>
-
-        </section>
-        <section className='row w-auto d-flex justify-content-center align-items-center'> 
-            { showData && showData.length >= 0 ? showData.map((item, index) => {
-                return(
-                    <article className='my-3  col-lg-3 col-md-4 col-sm-6 col-xs-12 d-flex flex-col justify-content-center align-items-center section_size' >
-                        <section className=' '>
-                            <img className='image_size' src={item.link} alt="poster"  />
-                            <p className='poster_text mt-1 text-start justify-content-start'>{item.label}</p>
-                            <p className='category'>U/A &bull; {item.category}</p>
-                            <p className='category mb-1'>{item.lang}</p>
-                            <button className='btn active my-1 btn_sm'>View details</button>
+    <main className='container bg-light py-3'>
+    <h4 className='text-dark px-2 px-sm-3 px-lg-5'>Coming soon</h4>
+    <motion.div variants={MotionContainer}
+initial="hidden"
+animate="visible" className=' row d-flex justify-content-evenly align-items-center'> 
+        { showData && showData.length >= 0 ? showData.map((item, index) => {
+            return( 
+                <motion.div variants={MotionItem}  className=' item my-3  col-lg-3 col-md-4 col-sm-6 col-xs-12 d-flex flex-col justify-content-center align-items-center section_size' >
+                    <section className=' '>
+                        <img className='image_size' src={item.link} alt="poster"  />
+                        <p className='poster_text mt-1 text-start justify-content-start'>{item.label}</p>
+                        <p className='category'>U/A &bull; {item.category}</p>
+                        <p className='category mb-1'>{item.lang}</p>
+                        <button className='btn active my-1 btn_sm'>View details</button>
                         <button className='btn active mx-2'>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <g id="notification_add_black_24dp 1" clip-path="url(#clip0_3892_20554)">
@@ -109,15 +106,14 @@ const ComingSoon = ({ref}) => {
                         </defs>
                         </svg>
                         </button>
-                        </section>
-                    </article> 
-                )
-            })
-                : "no data to show"
-            }
-        </section>
-        </div>
-    </main>
+                    </section>
+                </motion.div> 
+            )
+        })
+            : "no data to show"
+        }
+    </motion.div>
+</main>
   )
 }
 

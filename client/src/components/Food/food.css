@@ -70,12 +70,12 @@ h5{
 }
 @media screen and (max-width: 420px) {
     .card_width{
-        width: 150px !important;
+        width: 47% !important;
     }
 }
 @media screen and (max-width: 370px) {
     .card_width{
-        width: 130px !important;
+        width: 47% !important;
     }
 }
 
@@ -84,8 +84,17 @@ h5{
 }
 
 .bottom_section{
-    bottom: 60px;
+    bottom: 50px;
     position: sticky;
     background-color: white;
     z-index: 2;
+}.sticky-cart{
+    position: sticky;
+    top: 0;
+}.sticky-cart-inner{
+    position: relative;
+    max-height: 500px;
+    overflow: auto;
+}.justify-content-modify{
+    justify-content: space-between !important;
 }

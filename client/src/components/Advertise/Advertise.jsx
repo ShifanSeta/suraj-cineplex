@@ -17,19 +17,16 @@ import profile from "../../utils/images/profile1.svg";
 import email from "../../utils/images/email.svg";
 import Slider from '../Slider/Slider'
 import call from "../../utils/images/call.svg";
+import Header from "../shared/Header/Header";
 
 
 
 const Advertise = () => {
   return (
     <main>
-      <section className="bg_header_advertise">
-        <div className="px-5 py-3 d-flex justify-content-start align-items-center">
-          <h4 className="text-bold">Advertise</h4>
-        </div>
-      </section>
+      <Header title={"Advertise"} />
       <section className="bg-white">
-        <div className="mx-5 py-3 desktop_advertise">
+        {/* <div className="mx-5 py-3 desktop_advertise">
           <Swiper
             slidesPerView={3}
             spaceBetween={30}
@@ -56,7 +53,9 @@ const Advertise = () => {
               <img src={argy} alt="sliderAdvertise" />
             </SwiperSlide>
           </Swiper>
-        </div>
+        </div> */}
+          <AdvertiseSlider />
+
         <div className=" mobile_advertise">
           <Slider />
         </div>
@@ -76,7 +75,6 @@ const Advertise = () => {
                         type="text"
                         className="form-control"
                         id="floatingInputGroup1"
-                        placeholder="Username"
                     />
                     <label htmlFor="floatingInputGroup1">Name</label>
                     </div>
@@ -89,7 +87,6 @@ const Advertise = () => {
                         type="text"
                         className="form-control"
                         id="floatingInputGroup1"
-                        placeholder="Username"
                     />
                     <label htmlFor="floatingInputGroup1">Email</label>
                     </div>
@@ -102,7 +99,6 @@ const Advertise = () => {
                         type="text"
                         className="form-control"
                         id="floatingInputGroup1"
-                        placeholder="Username"
                     />
                     <label htmlFor="floatingInputGroup1">Mobile No.</label>
                     </div>
@@ -132,12 +128,12 @@ const Advertise = () => {
                 </div>
                 <div className="input-group mb-3 col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div className="form-floating">
-                    <textarea className="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style={{height: '50px'}} defaultValue={""} />
+                    <textarea className="form-control" id="floatingTextarea2" style={{height: '50px'}} defaultValue={""} />
                     <label htmlFor="floatingTextarea2">Comments</label>
                     </div>
                 </div>
                 <div className="input-group mb-3 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <button className="btn btn_color_custom">Submit</button>
+                    <button className="btn btn-danger">Submit</button>
                 </div>
                 
                 
@@ -152,3 +148,38 @@ const Advertise = () => {
 };
 
 export default Advertise;
+
+
+export const AdvertiseSlider = () => {
+  return(
+    <>
+    <div className="mx-5 py-3 desktop_advertise">
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={30}
+            navigation={true}
+            modules={[Navigation]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <img src={argy} alt="sliderAdvertise" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={fail} alt="sliderAdvertise" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={fighter} alt="sliderAdvertise" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={fighter} alt="sliderAdvertise" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={fail} alt="sliderAdvertise" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src={argy} alt="sliderAdvertise" />
+            </SwiperSlide>
+          </Swiper>
+        </div></>
+  )
+}

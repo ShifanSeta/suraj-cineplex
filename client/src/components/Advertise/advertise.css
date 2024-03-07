@@ -84,3 +84,6 @@
     display: none !important;
   }
 }
+.form-floating>label, .input-group .btn {
+  z-index: unset !important;
+}

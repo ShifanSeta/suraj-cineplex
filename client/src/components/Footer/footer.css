@@ -25,3 +25,15 @@
         display: none;
     }
 }
+
+.vl {
+    border-right: 1px solid gray;
+    text-decoration: none;
+    color: gray;
+    height: 23px;
+}
+
+.vl-2{
+    text-decoration: none;
+    color: gray;
+}

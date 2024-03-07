@@ -7,9 +7,32 @@ import hanuman from '../../utils/movie/hanuman.avif'
 import kamthan from '../../utils/movie/kamthan.avif'
 import tbm from '../../utils/movie/tbuj.jpeg'
 import './nowshowing.css'
+import { motion } from "framer-motion";
+
+
+
 
 const NowShowing = () => {
 
+    const MotionContainer = {
+        hidden: { opacity: 1, scale: 0 },
+        visible: {
+          opacity: 1,
+          scale: 1,
+          transition: {
+            delayChildren: 0.3,
+            staggerChildren: 0.2
+          }
+        }
+      };
+      
+      const MotionItem = {
+        hidden: {  y: 30, opacity: 0 },
+        visible: {
+          y: 0,
+          opacity: 1
+        }
+      };
 
 
 
@@ -58,39 +81,31 @@ const NowShowing = () => {
         },
     ]
   return (
-    <main className='container py-5 '>
-        <h4 className='text-dark mx-3'>Now Showing</h4>
-        <section className='row d-flex justify-content-evenly align-items-center'> 
+    <main className='container py-3 '>
+        <h4 className='text-dark px-2 px-md-3 px-sm-3 px-lg-5'>Now Showing</h4>
+        <motion.div variants={MotionContainer}
+    initial="hidden"
+    animate="visible" className=' row d-flex justify-content-evenly align-items-center'> 
             { showData && showData.length >= 0 ? showData.map((item, index) => {
                 return( 
-                    <article className='my-3  col-lg-3 col-md-4 col-sm-6 col-xs-12 d-flex flex-col justify-content-center align-items-center section_size' >
+                    <motion.div variants={MotionItem}  className=' item my-3  col-lg-3 col-md-4 col-sm-6 col-xs-12 d-flex flex-col justify-content-center align-items-center section_size' >
                         <section className=' '>
                             <img className='image_size' src={item.link} alt="poster"  />
                             <p className='poster_text mt-1 text-start justify-content-start'>{item.label}</p>
                             <p className='category'>U/A &bull; {item.category}</p>
                             <p className='category mb-1'>{item.lang}</p>
-                            <button className='btn active my-1 btn_sm'>Book Tickets</button>
+                            <button className='btn btn-danger  my-1 btn_sm'>Book Tickets</button>
                         <button className='btn active mx-2'>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <g id="notification_add_black_24dp 1" clip-path="url(#clip0_3892_20554)">
-                        <g id="Group">
-                        <path id="Vector" d="M16 14V17H8V10C8 7.79 9.79 6 12 6C12.85 6 13.64 6.26 14.28 6.72L15.71 5.29C15.07 4.78 14.32 4.41 13.5 4.2V3.5C13.5 2.67 12.83 2 12 2C11.17 2 10.5 2.67 10.5 3.5V4.2C7.91 4.86 6 7.21 6 10V17H4V19H20V17H18V14H16ZM12 22C13.1 22 14 21.1 14 20H10C10 21.1 10.9 22 12 22ZM24 8H21V5H19V8H16V10H19V13H21V10H24V8Z" fill="black"/>
-                        </g>
-                        </g>
-                        <defs>
-                        <clipPath id="clip0_3892_20554">
-                        <rect width="24" height="24" fill="white"/>
-                        </clipPath>
-                        </defs>
-                        </svg>
+                        <i className="pi pi-play p-1"></i>
+
                         </button>
                         </section>
-                    </article> 
+                    </motion.div> 
                 )
             })
                 : "no data to show"
             }
-        </section>
+        </motion.div>
     </main>
   )
 }

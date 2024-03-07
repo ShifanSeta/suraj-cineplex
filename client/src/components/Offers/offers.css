@@ -18,8 +18,25 @@
 .row_p{
     padding: 0 !important;
 }
+
+
 @media screen and (max-width: 600px) {
     .main_container{
         display: none !important;
     }
+}
+
+@media screen and (min-width: 599px) {
+    .main-card-container-mobile{
+        display: none !important;
+    }
+}
+
+
+.p-carousel-indicators {
+    display: none;
+}
+
+.card-border{
+    border: none !important;
 }

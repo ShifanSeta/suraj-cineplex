@@ -7,7 +7,7 @@
 .main_bottom_bar{
     bottom: 0;
     position: sticky;
-    z-index: 1;
+    z-index: 2;
     background-color: white;
 }
 
@@ -23,7 +23,13 @@
 }
 
 .svg_img{
-    width: 25px;
+    width: 19px;
 }
 
+.nav-font{
+    font-size: 11px;
+}
 
+.offcanvas-bottom-react {
+    height: 48vh !important;
+}

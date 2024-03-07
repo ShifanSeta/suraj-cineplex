@@ -13,5 +13,35 @@
     }
 }
 
+.btn_col{
+    background-color: #ffcb03 !important;
+}
+
+.bg-img-container{
+    background-image: url('../../utils/food/dbdb.avif');
+    background-repeat: no-repeat;
+    background-size: 100vw ;
+}
+
+.bg-img-container-sm{
+    background-image: url('../../utils/food/dbdb.avif');
+    background-repeat: repeat;
+    background-size: 100vw ;
+}
+
+    .text-shadow{
+        text-shadow: 2px 3px #b0bbbe;
+
+    }
 
 
+@media screen and (max-width: 600px) {
+    .hide-sm-card{
+        display: none !important;
+    }
+}
+@media screen and (min-width: 600px) {
+    .hide-lg-card{
+        display: none !important;
+    }
+}

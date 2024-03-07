@@ -7,7 +7,6 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
-
 import "./swiper.css";
 
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
@@ -25,7 +24,7 @@ export default function SwiperSlides() {
 
   return (
     <>
-      <div className="container bg-white main_swiper">
+      {/* <div className="container bg-white main_swiper">
         <div className="bg-light ">
           <Swiper
             style={{
@@ -115,6 +114,7 @@ export default function SwiperSlides() {
               />
             </SwiperSlide>
           </Swiper>
+          
         </div>
       </div>
       <div
@@ -138,7 +138,7 @@ export default function SwiperSlides() {
             ></iframe>
           </div>
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

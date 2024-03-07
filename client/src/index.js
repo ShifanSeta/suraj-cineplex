@@ -1,7 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App'
+import './App.css'
+import { PrimeReactProvider } from 'primereact/api';
+import "primereact/resources/themes/lara-light-cyan/theme.css";
+
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<App />)
+root.render(
+    <PrimeReactProvider>
+        <App className="app" />
+    </PrimeReactProvider>
+)

@@ -12,12 +12,25 @@ import Auth from './components/auth/Auth'
 import Movies from './components/Movies/Movies'
 import Advertise from './components/Advertise/Advertise'
 import Contact from './components/Contact/Contact'
+import About from './components/About/About'
+import Terms from './components/Terms/Terms'
+import PrivacyPolicy from './components/PrivacyPolicy/PrivacyPolicy'
+import TermsUse from './components/Terms-use/TermsUse'
+import Feedback from './components/Feedback/Feedback'
+import "@fontsource/roboto"; // Defaults to weight 400
+import "@fontsource/roboto/400.css"; // Specify weight
+import "@fontsource/roboto/400-italic.css"; // Specify weight and style
+import 'primeicons/primeicons.css';
+import Error from './components/shared/Error'
+import ScrollToTop from './components/ScrollToTop'
+
 
 const App = () => {
   
   return (
     <>
         <Router>
+          <ScrollToTop />
             <Navbar />
             <Routes>
                 <Route path='/' element={<DashBoard />} />
@@ -27,8 +40,13 @@ const App = () => {
                 <Route path='/movies' element={<Movies />} />
                 <Route path='/advertise' element={<Advertise />} />
                 <Route path='/contact-us' element={<Contact />} />
-
-
+                <Route path='/about-us' element={<About />} />
+                <Route path='/terms-conditions' element={<Terms />} />
+                <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+                <Route path='/terms-use' element={<TermsUse />} />
+                <Route path='/feedback' element={<Feedback />} />
+                
+                <Route path='*' element={<Error />} />
             </Routes>
             <BottomBar />
             <Footer />

@@ -1,0 +1,31 @@
+
+.terms_paragraph{
+    /* color: #000;
+    font-size: 14px;
+    line-height: 140%;
+    text-align: justify;
+    width: 80%; */
+    color: #000;
+    font-size: 14px;
+    text-align: justify;
+}
+.refund_paragraph{
+    color: #000;
+    font-size: 14px;
+    text-align: justify;
+    width: 65%;
+}
+
+@media screen and (max-width: 500px) {
+    .refund_paragraph{
+        
+        width: 95%;
+    }
+}
+
+
+/* @media (min-width: 992px){
+    .mxll-5 {
+        margin-left: 6rem !important;
+    }
+} */
