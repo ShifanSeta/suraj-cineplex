@@ -7,15 +7,15 @@ import hanuman from '../../utils/movie/hanuman.avif'
 import kamthan from '../../utils/movie/kamthan.avif'
 import tbm from '../../utils/movie/tbuj.jpeg'
 import './nowshowing.css'
-import { motion } from "framer-motion";
+import { calcLength, motion } from "framer-motion";
 import getMovies from '../../api/movies/movies'
-
+import {Dialog} from 'primereact/dialog'
 
 
 const NowShowing = () => {
 
     const [movies, setMovies] = useState()
-
+    const [visible, setVisible] = useState(false)
     useEffect(() => {
         getMovies().then((res)=> {
             setMovies(res.data)
@@ -97,20 +97,29 @@ const NowShowing = () => {
         <h4 className='text-dark px-2 px-md-3 px-sm-3 px-lg-5'>Now Showing</h4>
         <div variants={MotionContainer}
     initial="hidden"
-    animate="visible" className=' row d-flex justify-content-start align-items-center'> 
+    animate="visible" className=' row d-flex justify-content-center align-items-center'> 
             { movies && movies.length >= 0 ? movies.map((item) => {
+                const linky = "https://www.youtube.com/embed/"
+                const editedLink = item.youtube_link
                 return( 
-                    <div variants={MotionItem} key={item.id} className=' item my-3  col-lg-3 col-md-4 col-sm-6 col-xs-12 d-flex flex-col justify-content-center align-items-center section_size' >
+                    <div  key={item.id} className=' item my-3  col-lg-3 col-md-4 col-sm-6 col-xs-12 d-flex flex-col justify-content-center align-items-center section_size' >
                         <section className=' '>
                             <img className='image_size' src={item.image} alt="poster"  />
                             <p className='poster_text mt-1 text-start justify-content-start'>{item.name}</p>
                             <p className='category'>U/A &bull; {item.duration}</p>
                             <p className='category mb-1'>{item.lenguage}</p>
                             <button className='btn btn-danger  my-1 btn_sm'>Book Tickets</button>
-                        <button className='btn active mx-2'>
-                        <i className="pi pi-play p-1"></i>
+                            <button className='btn active mx-2' label="Show" onClick={() => setVisible(true)}>
+                            <i className="pi pi-play p-1"></i>
+                            </button>
+                          {  <Dialog key={item.id} header="Trailer" visible={visible} style={{ width: 'auto', height: "auto" }} onHide={() => setVisible(false)}>
+                            <iframe width="420" height="315"
+                            title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen
+                            src={linky+item.youtube_link}>
+                            </iframe>
+                            {/* <iframe width="100%" height="" src={`//www.youtube.com/embed/${item.youtube_link}`} ></iframe> */}
 
-                        </button>
+                            </Dialog>}
                         </section>
                     </div> 
                 )

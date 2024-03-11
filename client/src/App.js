@@ -23,6 +23,7 @@ import "@fontsource/roboto/400-italic.css"; // Specify weight and style
 import 'primeicons/primeicons.css';
 import Error from './components/shared/Error'
 import ScrollToTop from './components/ScrollToTop'
+import { AdminPanel } from './Admin'
 
 
 const App = () => {
@@ -31,8 +32,10 @@ const App = () => {
     <>
         <Router>
           <ScrollToTop />
-            <Navbar />
-            <Routes>
+          <AdminPanel />
+          <div>
+          <Navbar />
+          <Routes>
                 <Route path='/' element={<DashBoard />} />
                 <Route path='/offers' element={<OffersList />} />
                 <Route path='/food' element={<Food />} />
@@ -45,10 +48,16 @@ const App = () => {
                 <Route path='/privacy-policy' element={<PrivacyPolicy />} />
                 <Route path='/terms-use' element={<TermsUse />} />
                 <Route path='/feedback' element={<Feedback />} />
+                <Route path='/admin-panel' element={<AdminPanel />} />
+
+
                 
                 <Route path='*' element={<Error />} />
             </Routes>
+          </div>
+            
             <BottomBar />
+
             <Footer />
         </Router>   
     </>

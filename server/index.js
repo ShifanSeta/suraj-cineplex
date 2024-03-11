@@ -2,6 +2,7 @@ import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import movieRoute from './routes/movies-routes.js'
+
 const app = express();
 
 dotenv.config();

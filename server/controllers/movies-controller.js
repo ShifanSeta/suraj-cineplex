@@ -38,7 +38,7 @@ export const getMovieById = async(req, res) => {
 
 //update 
 
-export const updateMovies = async() => {
+export const updateMovies = async(req, res) => {
     try {
         const updatedMovie = await Movies.findByIdAndUpdate(req.params.id, {$set: req.body});
         res.status(200).json(updatedMovie);
@@ -49,7 +49,7 @@ export const updateMovies = async() => {
 
 //delete
 
-export const deleteMovies = async() => {
+export const deleteMovies = async(req, res) => {
     try {
         await Movies.findByIdAndDelete(req.params.id);
         res.status(200).json("movies successfully deleted")
