@@ -70,13 +70,17 @@ h5{
 }
 @media screen and (max-width: 420px) {
     .card_width{
-        width: 47% !important;
+        width: 50% !important;
     }
 }
 @media screen and (max-width: 370px) {
     .card_width{
-        width: 47% !important;
+        width: 50% !important;
     }
+}
+
+.font-header-items{
+    font-size: 0.7rem !important;
 }
 
 .img_w{

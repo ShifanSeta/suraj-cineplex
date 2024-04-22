@@ -12,33 +12,10 @@ import { motion } from "framer-motion";
 
 
 const ComingSoon = ({ref}) => {
-    const MotionContainer = {
-        hidden: { opacity: 1, scale: 0 },
-        visible: {
-          opacity: 1,
-          scale: 1,
-          transition: {
-            delayChildren: 0.3,
-            staggerChildren: 0.2
-          }
-        }
-      };
-      
-      const MotionItem = {
-        hidden: {  y: 30, opacity: 0 },
-        visible: {
-          y: 0,
-          opacity: 1
-        }
-      };
+   
 
     const showData = [
-        {
-            label : "ARGYLLE",
-            link: argy,
-            category: 'Drama',
-            lang: "multiple"
-        },
+        
         {
             label : "12th FAIL",
             link: fail,
@@ -78,14 +55,13 @@ const ComingSoon = ({ref}) => {
         },
     ]
   return (
-    <main className='container bg-light py-3'>
-    <h4 className='text-dark px-2 px-sm-3 px-lg-5'>Coming soon</h4>
-    <motion.div variants={MotionContainer}
-initial="hidden"
-animate="visible" className=' row d-flex justify-content-evenly align-items-center'> 
+    <main className=' bg-light '>
+        <section className='container py-3'>
+        <h4 className='text-dark px-2 px-sm-3 px-lg-5'>Coming soon</h4>
+    <div  className=' row d-flex justify-content-start mx-auto align-items-center'> 
         { showData && showData.length >= 0 ? showData.map((item, index) => {
             return( 
-                <motion.div variants={MotionItem}  className=' item my-3  col-lg-3 col-md-4 col-sm-6 col-xs-12 d-flex flex-col justify-content-center align-items-center section_size' >
+                <div  className=' item my-3  col-lg-3 col-md-4 col-sm-6 col-xs-12 d-flex flex-col justify-content-center align-items-center section_size' >
                     <section className=' '>
                         <img className='image_size' src={item.link} alt="poster"  />
                         <p className='poster_text mt-1 text-start justify-content-start'>{item.label}</p>
@@ -107,12 +83,14 @@ animate="visible" className=' row d-flex justify-content-evenly align-items-cent
                         </svg>
                         </button>
                     </section>
-                </motion.div> 
+                </div> 
             )
         })
             : "no data to show"
         }
-    </motion.div>
+    </div>
+        </section>
+    
 </main>
   )
 }

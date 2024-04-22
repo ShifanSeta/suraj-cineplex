@@ -115,7 +115,7 @@
 
 @media screen and (max-width: 500px) {
     .section_size{
-        width: 10rem !important;
+        width: 50% !important;
     }
     .image_size{
         width: 9rem !important;

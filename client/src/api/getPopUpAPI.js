@@ -1,11 +1,10 @@
 
 
-export default async function getMovies(signal) {
-console.log("signal", signal);
-const baseUrl = process.env.REACT_APP_API_BASE_DB_URL;
-const getMoviesUrl = process.env.REACT_APP_API_NOW_MOVIES
+export async function getPopUpAPI(signal) {
+    const baseUrl = process.env.REACT_APP_API_BASE_DB_URL;
+    const endpoint = process.env.REACT_APP_API_GET_POPUP
     try {
-        const resp = await fetch(baseUrl+getMoviesUrl, {
+        const resp = await fetch(baseUrl+endpoint, {
         signal,
         method: "GET",
         cache: "no-cache",
@@ -21,4 +20,4 @@ const getMoviesUrl = process.env.REACT_APP_API_NOW_MOVIES
       } catch (error) {
         console.log(error);
       }
-} 
+}

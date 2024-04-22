@@ -41,6 +41,7 @@ const FoodCard = () => {
                   <use xlinkHref="#check2-circle" />
                 </svg> */}
                 <h1 className="text-body-emphasis text-shadow">"Munch, Watch, Indulge, Enjoy!" </h1>
+                <p>now Order food to enjoy at screen</p>
                 <Link to='/food' className="btn px-5 mt-3 btn-danger" type="button">
                   Order Now
                 </Link>

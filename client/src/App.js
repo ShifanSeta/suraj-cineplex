@@ -1,5 +1,6 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap.bundle.min.js'
 import DashBoard from './components/DashBoard/DashBoard'
@@ -26,16 +27,20 @@ import ScrollToTop from './components/ScrollToTop'
 import { AdminPanel } from './Admin'
 
 
-const App = () => {
-  
+const App = ({location}) => {
+
+  const excludedRoutes = ['/admin-panel'];
+  let usedlocation = useLocation();
+console.log(usedlocation, "locate");
   return (
     <>
-        <Router>
           <ScrollToTop />
-          <AdminPanel />
           <div>
-          <Navbar />
+
+          {!excludedRoutes.includes(usedlocation.pathname) && <Navbar />}
+
           <Routes>
+
                 <Route path='/' element={<DashBoard />} />
                 <Route path='/offers' element={<OffersList />} />
                 <Route path='/food' element={<Food />} />
@@ -48,20 +53,23 @@ const App = () => {
                 <Route path='/privacy-policy' element={<PrivacyPolicy />} />
                 <Route path='/terms-use' element={<TermsUse />} />
                 <Route path='/feedback' element={<Feedback />} />
-                <Route path='/admin-panel' element={<AdminPanel />} />
 
+                <Route path='/admin-panel' element={<AdminPanel />} />
 
                 
                 <Route path='*' element={<Error />} />
-            </Routes>
-          </div>
-            
-            <BottomBar />
 
-            <Footer />
-        </Router>   
+
+            </Routes>
+          {!excludedRoutes.includes(usedlocation.pathname) && <Footer />}
+            
+          </div>
+          {!excludedRoutes.includes(usedlocation.pathname) && <BottomBar />}
+            
+            
+
     </>
   )
 }
 
-export default App
+export default App;

@@ -2,17 +2,19 @@ import React from 'react'
 import './About.css'
 import cineplex from '../../utils/images/cineplex.jpeg';
 import cinemaReel from '../../utils/images/pvr_roll.avif';
-
+import Header from '../shared/Header/Header';
 
 
 const About = () => {
   return (
     <main>
-        <section className=' about_header_color'>
+        {/* <section className=' about_header_color'>
             <h3 className='p-3 container'>            
                 About us
             </h3>
-        </section>
+        </section> */}
+        <Header title={'About us'} />
+
         <section className='d-flex  container'>
             <div className="row">
             <div className="col-lg-4 col-md-4 col-xs-12 col-sm-12 px-2">
